@@ -1,4 +1,4 @@
-package BJ.study0622.coin;
+package 백준.study0622.동전;
 
 import java.io.BufferedReader;
 import java.io.IOException;
