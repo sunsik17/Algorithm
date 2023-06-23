@@ -1,4 +1,4 @@
-package 프로그래머스.study0622.요격시스템;
+package 프로그래머스.d0622요격시스템;
 
 import java.util.Arrays;
 class Solution {

@@ -1,8 +1,7 @@
-package 프로그래머스.study0622.호텔대실;
+package 프로그래머스.d0622호텔대실;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.PriorityQueue;
 
 class Solution {
