@@ -24,16 +24,23 @@ public class Main {
 		dp[1] = 0;
 
 		for (int i = 2; i < k + 1; i++) {
-			if (i % 3 == 0) {
-				int count = dp[i / 3] + 1;
-				dp[i] = Math.min(count, dp[i - 1] + 1);
-			} else if (i % 2 != 0) {
+			if (i % 3 == 0 || i % 2== 0) {
+				int count = 0;
+				int count2;
+				if (i % 3 == 0) {
+					count = dp[i / 3] + 1;
+					dp[i] = Math.min(count, dp[i - 1] + 1);
+				}
+				if (i % 2 == 0){
+					count2 = dp[i / 2] + 1;
+					if (count == 0) {
+						dp[i] = Math.min(count2, dp[i - 1] + 1);
+					} else {
+						dp[i] = Math.min(count, count2);
+					}
+				}
+			} else {
 				dp[i] = dp[i - 1] + 1;
-				continue;
-			}
-			if (i % 2 == 0) {
-				int count = dp[i / 2] + 1;
-				dp[i] = Math.min(count, dp[i - 1] + 1);
 			}
 		}
 
