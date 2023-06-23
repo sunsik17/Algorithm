@@ -2,7 +2,7 @@ package 백준.study0622.숫자1로만들기;
 
 import java.util.Scanner;
 
-public class Main {
+public class 숫자1로만들기 {
 
 	static int[] dp;
 	static int k;
