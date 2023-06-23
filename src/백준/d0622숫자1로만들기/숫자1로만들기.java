@@ -1,4 +1,4 @@
-package 백준.study0622.숫자1로만들기;
+package 백준.d0622숫자1로만들기;
 
 import java.util.Scanner;
 
