@@ -1,4 +1,4 @@
-package 백준.d0625;
+package 백준.d0625달리기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
