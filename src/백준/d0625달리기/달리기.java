@@ -48,6 +48,7 @@ public class 달리기 {
 		System.out.println(Arrays.deepToString(visited));
 		System.out.println(answer == 0 ? -1 : answer);
 	}
+
 	private static void bfs() {
 
 		while (!q.isEmpty()) {
@@ -58,14 +59,16 @@ public class 달리기 {
 					int nY = cur[1] + (dy[i] * j);
 
 					if (nX >= 0 && nY >= 0 && nX < N && nY < M && map[nX][nY] == '.') {
-						if (nX == x1 - 1 && nY == y1 - 1) continue;
+						if (nX == x1 - 1 && nY == y1 - 1) {
+							continue;
+						}
 						if (visited[nX][nY] == 0) {
 							visited[nX][nY] = visited[cur[0]][cur[1]] + 1;
 							if (nX == x2 - 1 && nY == y2 - 1) {
 								return;
 							}
 							q.add(new int[]{nX, nY});
-						} else if (visited[nX][nY] <= visited[cur[0]][cur[1]]){
+						} else if (visited[nX][nY] <= visited[cur[0]][cur[1]]) {
 							break;
 						}
 					} else {
