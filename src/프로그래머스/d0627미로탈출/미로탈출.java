@@ -17,7 +17,6 @@ public class 미로탈출 {
         int answer = 0;
         n = maps[0].length();
         m = maps.length;
-
         map = new char[m][n];
 
         int idx = 0;
