@@ -23,7 +23,7 @@ public class 동전2 {
 		}
 		coins.sort((x,y) -> x - y);
 		Arrays.fill(dp, Integer.MAX_VALUE - 1);
-		dp[0] = 0;
+		dp[0] = 0; // dp[n] = n 가치를 만드는 최소의 동전 수
 		changeCoin();
 		System.out.println(Arrays.toString(dp));
 		System.out.println(dp[k]);
