@@ -1,0 +1,2 @@
+## Algorithm
+> daily algorithm solve
