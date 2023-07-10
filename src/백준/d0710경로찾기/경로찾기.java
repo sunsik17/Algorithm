@@ -44,18 +44,17 @@ public class 경로찾기 {
 	private static String bfs(int num) {
 		visited = new boolean[N + 1];
 		q.add(num);
-		StringBuilder sb = new StringBuilder();
 		int[] arr = new int[N];
 
 		while (!q.isEmpty()) {
 			int cur = q.poll();
 
 			List<Integer> adj = G.get(cur);
-			for (int i = 0; i < adj.size(); i++) {
-				if (!visited[adj.get(i)]) {
-					visited[adj.get(i)] = true;
-					q.add(adj.get(i));
-					arr[adj.get(i) - 1] = 1;
+			for (Integer integer : adj) {
+				if (!visited[integer]) {
+					visited[integer] = true;
+					q.add(integer);
+					arr[integer - 1] = 1;
 				}
 			}
 		}
