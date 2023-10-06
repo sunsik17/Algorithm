@@ -43,5 +43,4 @@ public class 영의개수 {
 		}
 		System.out.println(sb);
 	}
-
 }
