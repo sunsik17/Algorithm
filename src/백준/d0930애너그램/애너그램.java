@@ -1,6 +1,9 @@
+package 백준.d0930애너그램;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.*;
 
 class 애너그램 {
     static int N;
