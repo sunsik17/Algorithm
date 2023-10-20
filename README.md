@@ -1,2 +1,2 @@
 ## Algorithm
-> daily algorithm solve
+daily algorithm solve
