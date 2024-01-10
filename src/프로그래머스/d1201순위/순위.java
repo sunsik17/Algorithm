@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.List;
 import java.util.LinkedList;
 
-class Solution {
+class 순위 {
     List<List<Integer>> v = new ArrayList<>();
     List<List<Integer>> l = new ArrayList<>();
     boolean[] vVisited;

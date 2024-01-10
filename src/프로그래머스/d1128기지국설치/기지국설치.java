@@ -1,4 +1,4 @@
-class Solution {
+class 기지국설치 {
     public int solution(int n, int[] stations, int w) {
         int answer = 0;
         int idx = 1;
