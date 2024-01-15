@@ -1,4 +1,4 @@
-package d240115근손실;
+package 백준.d240115근손실;
 
 import java.io.BufferedReader;
 import java.io.IOException;
