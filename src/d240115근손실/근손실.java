@@ -9,7 +9,7 @@ public class 근손실 {
 	static int N, K;
 	static boolean[] visited;
 	static int[] kits;
-	static int answer, count = 0;
+	static int answer = 0;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -24,11 +24,11 @@ public class 근손실 {
 			kits[i] = Integer.parseInt(st.nextToken());
 		}
 
-		dfs(500);
+		dfs(500, 0);
 		System.out.println(answer);
 	}
 
-	private static void dfs(int w) {
+	private static void dfs(int w, int count) {
 		if (w < 500) {
 			return;
 		}
@@ -43,7 +43,7 @@ public class 근손실 {
 				visited[i] = true;
 				count++;
 				w = w - K + kits[i];
-				dfs(w);
+				dfs(w, count);
 				w = w + K - kits[i];
 				count--;
 				visited[i] = false;
