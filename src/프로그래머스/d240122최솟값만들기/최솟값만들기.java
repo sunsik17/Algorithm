@@ -1,7 +1,6 @@
 package 프로그래머스.d240122최솟값만들기;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 class 최솟값만들기 {
 	public int solution(int[] A, int[] B) {
