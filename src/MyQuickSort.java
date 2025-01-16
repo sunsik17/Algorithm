@@ -1,57 +1,41 @@
-public class MyStack {
-	private int size;
-	private int[] stack;
-	private int top;
-	public MyStack(int size) {
-		this.size = size;
-		stack = new int[size];
-		top = -1;
+import java.util.Arrays;
+
+class MyQuickSort {
+	public void quickSort(int[] arr, int left, int right) {
+		if (left >= right) return;
+
+		int pivot = partition(arr, left, right);
+
+		quickSort(arr, left, pivot - 1);
+		quickSort(arr, pivot + 1, right);
 	}
 
-	public boolean isEmpty() {
-		return top == -1;
-	}
+	private int partition(int[] arr, int left, int right) {
+		int pivot = arr[left];
+		int i = left;
+		int j = right;
 
-	public boolean isFull() {
-		return top == size - 1;
-	}
+		while (i < j) {
+			while (arr[j] > pivot && i < j) j--;
+			while (arr[i] <= pivot && i < j) i++;
 
-	public int pop(){
-		if (isEmpty()){
-			System.out.println("error");
-			return 0;
+			swap(arr, i, j);
 		}
-		int result = stack[top];
-		stack[top--] = 0;
-		return result;
+		swap(arr, left, i);
+
+		return i;
 	}
 
-	public void push(int element) {
-		if (isFull()) {
-			System.out.println("error");
-			return;
-		}
-		stack[++top] = element;
-	}
-
-	public int size() {
-		return top;
-	}
-
-	public int peek() {
-		return stack[top];
-	}
-
-	public void fun() {
-		var x = 1;
-		var y = 4;
-		if (true) {
-			var x = 4;
-			y = 3;
-		}
+	private void swap(int[] arr, int i, int j) {
+		int tmp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = tmp;
 	}
 
 	public static void main(String[] args) {
-
+		int[] arr = new int[]{12, 2, 4, 25, 20, 1, 2, 3};
+		MyQuickSort sort = new MyQuickSort();
+		sort.quickSort(arr, 0, arr.length - 1);
+		System.out.println(Arrays.toString(arr));
 	}
 }
